@@ -1,0 +1,194 @@
+Skip to main content
+Google Classroom
+Classroom
+WT_BCSL504
+A,C
+Home
+Calendar
+Gemini
+Enrolled
+To-do
+2
+25-26 Research Methodology
+A & B & C
+C
+CN_BCS502
+C
+W
+WT_BCSL504
+A,C
+B
+BCS503-TOC (25-26)
+5C
+B
+BCS515A_2025-26
+B
+BCS508_2025-26
+M
+Mini-Project 2025-26
+A,B,C
+B
+BCS501_SoftwareEngineering-5C
+C
+U
+UI/UX_BCS456C
+A, B & C
+A
+ADA-BCS401(24-25)
+C
+D
+DBMS 4th SEM C section
+M
+Microcontrollers_4th SEM
+C Section
+G
+Graph Theory
+C
+I
+II C (CSE)
+c
+B
+BCS358D
+A, B & C
+N
+NSS_BNSK459
+5TH SEM_ABC
+S
+Social Connect & Responsibiity
+C
+3
+3rd Sem 'C' Section_DD&CO (BCS302)
+C Section
+(
+(2024-25) Object Oriented Program with Java
+C
+I
+III SEM CS-2024-25
+CS-C
+2
+2024-25 DS BCS304 & BCSL305 - C Section
+C
+O
+Operating systems BCS303(24-25)
+C
+I
+Introduction to Electrical Engineering
+C (2023-24)
+I
+IDT - C
+C
+I
+Indian Constitution C section
+C section
+C
+CSE-Physics (2023-24)
+C Section
+P
+Priciples of programming using C
+C
+C
+Communicative English
+A B C D E F G
+C
+Chemistry
+C
+S
+Scientific Foundations of health(23-24)
+C
+Archived classes
+Settings
+Material details
+7 program 
+Rajeshwari Rajeshwari
+•
+7:21 PM
+7.html file.rtf
+Microsoft Word
+
+7.css.docx
+Microsoft Word
+
+7_JS_FILE.txt
+Text
+
+Explanation.rtf
+Microsoft Word
+
+Class comments
+
+Add class comment…
+
+// Convert JSON text to JavaScript object
+function convertJsonToObject() {
+    const jsonInput = document.getElementById('jsonInput').value;
+    try {
+      const jsonObject = JSON.parse(jsonInput);
+      document.getElementById('objectOutput').textContent = JSON.stringify(jsonObject, null, 2);
+    } catch (error) {
+      document.getElementById('objectOutput').textContent = 'Invalid JSON!';
+    }
+  }
+  
+  // Convert JSON date text to JavaScript Date object
+  function convertJsonToDate() {
+    const dateInput = document.getElementById('dateInput').value;
+    try {
+      const jsonDate = JSON.parse(dateInput);
+      const dateObject = new Date(jsonDate.date);
+      document.getElementById('dateOutput').textContent = `Date Object: ${dateObject}`;
+    } catch (error) {
+      document.getElementById('dateOutput').textContent = 'Invalid JSON or date format!';
+    }
+  }
+  
+  // Convert JSON to CSV
+  function convertJsonToCsv() {
+    const jsonCsvInput = document.getElementById('jsonCsvInput').value;
+    try {
+      const jsonArray = JSON.parse(jsonCsvInput);
+      const headers = Object.keys(jsonArray[0]);
+      const csvRows = [
+        headers.join(','),
+        ...jsonArray.map(row => headers.map(header => row[header]).join(','))
+      ];
+      document.getElementById('csvOutput').textContent = csvRows.join('\n');
+    } catch (error) {
+      document.getElementById('csvOutput').textContent = 'Invalid JSON format!';
+    }
+  }
+  
+  // Convert CSV to JSON
+  function convertCsvToJson() {
+    const csvToJsonInput = document.getElementById('csvToJsonInput').value;
+    const lines = csvToJsonInput.split('\n');
+    const headers = lines[0].split(',');
+    const jsonArray = lines.slice(1).map(line => {
+      const values = line.split(',');
+      return headers.reduce((object, header, index) => {
+        object[header] = values[index];
+        return object;
+      }, {});
+    });
+    document.getElementById('jsonOutput').textContent = JSON.stringify(jsonArray, null, 2);
+  }
+  
+  // Create a hash using crypto module
+  // Create a hash using the Web Crypto API (SHA-256)
+async function createHash() {
+    const hashInput = document.getElementById('hashInput').value;
+    const encoder = new TextEncoder();
+    const data = encoder.encode(hashInput);
+    
+    // Use the Web Crypto API to generate a hash
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    
+    // Convert hash buffer to hex string
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    
+    document.getElementById('hashOutput').textContent = `Hash: ${hashHex}`;
+  }
+  
+  
+7_JS_FILE.txt
+Displaying 7_JS_FILE.txt.
